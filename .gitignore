@@ -1,0 +1,154 @@
+# Kernel module build artifacts
+*.o
+*.ko
+*.ko.cmd
+*.o.cmd
+*.mod
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+modules.order
+Module.symvers
+.tmp_versions/
+.*.cmd
+.*.d
+*.dwo
+*.su
+
+# Build directories
+/build/
+/.cache/
+/.tmp/
+
+# Kernel build system files
+.config
+.config.old
+.version
+.kernelrelease
+Module.markers
+modules.builtin
+modules.builtin.modinfo
+
+# Editor and IDE files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+.vim/
+tags
+TAGS
+cscope.*
+ncscope.*
+GPATH
+GRTAGS
+GTAGS
+
+# Log files
+*.log
+/logs/
+dmesg_*.txt
+kernel_*.log
+test_results_*.txt
+
+# Firmware files (if you want to avoid committing proprietary firmware)
+*.bin
+*.fw
+/firmware/
+# Uncomment if you want to track MT7925 firmware for testing
+#!/lib/firmware/mediatek/
+
+# Test outputs
+/test_output/
+/results/
+*.dump
+*.trace
+
+# Core dumps
+core
+core.*
+*.core
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# Patch files (unless you want to track them)
+*.patch
+*.diff
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+/tmp/
+/temp/
+*.tmp
+
+# Documentation build artifacts
+/docs/_build/
+/docs/html/
+/docs/latex/
+*.pdf
+
+# Archive and compressed files (optional - remove if you want to track these)
+*.tar
+*.tar.gz
+*.tar.bz2
+*.zip
+*.7z
+*.rar
+
+# Python bytecode (if you have any helper scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Shell script artifacts
+*.pid
+*.lock
+
+# Debian package build files
+debian/files
+debian/*.log
+debian/*.substvars
+debian/*debhelper*
+debian/stamp-*
+
+# Coverage reports
+*.gcov
+*.gcda
+*.gcno
+/coverage/
+/htmlcov/
+
+# Ctags
+.tags
+.tags_sorted_by_file
+
+# Git files to ignore
+*.orig
+*.rej
+*.swp
+*~
+
+# Project specific
+/mt7927_firmware/
+/experimental/
+/private_notes.md
+/TODO.private
+
+# Keep important configuration files
+!.gitignore
+!.gitattributes
+!Makefile
+!Kbuild
+!tests/Kbuild

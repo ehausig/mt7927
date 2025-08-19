@@ -1,0 +1,43 @@
+# MT7927 Test Modules - Kbuild file
+# This file is used by the kernel build system
+
+# Safe basic tests
+obj-m += 01_safe_basic/test_pci_enum.o
+obj-m += 01_safe_basic/test_bar_map.o
+obj-m += 01_safe_basic/test_chip_id.o
+obj-m += 01_safe_basic/test_scratch_rw.o
+
+# Safe discovery tests
+obj-m += 02_safe_discovery/test_config_read.o
+obj-m += 02_safe_discovery/test_config_decode.o
+obj-m += 02_safe_discovery/test_mt7925_patterns.o
+
+# Careful write tests
+obj-m += 03_careful_write/test_memory_activate.o
+
+# Risky operation tests
+obj-m += 04_risky_ops/test_config_mapper.o
+obj-m += 04_risky_ops/test_config_execute.o
+obj-m += 04_risky_ops/test_memory_probe.o
+obj-m += 04_risky_ops/test_firmware_load.o
+obj-m += 04_risky_ops/test_firmware_extract.o
+obj-m += 04_risky_ops/test_mcu_init.o
+obj-m += 04_risky_ops/test_full_config.o
+obj-m += 04_risky_ops/test_pcie_init.o
+obj-m += 04_risky_ops/test_simple_init.o
+obj-m += 04_risky_ops/test_fw_trigger.o
+obj-m += 04_risky_ops/test_final_analysis.o
+obj-m += 04_risky_ops/test_mt7925_firmware.o
+
+# Driver modules
+obj-m += 04_risky_ops/mt7927_wrapper.o
+obj-m += 04_risky_ops/mt7927_init.o
+obj-m += 04_risky_ops/mt7927_init_dma.o
+
+# Exploration tools
+obj-m += tools/mt7927_data_dumper.o
+obj-m += tools/mt7927_deep_explorer.o
+obj-m += tools/mt7927_final_analysis.o
+obj-m += 04_risky_ops/test_mcu_direct.o
+obj-m += 04_risky_ops/test_read_config.o
+obj-m += 04_risky_ops/test_trigger_fw.o
